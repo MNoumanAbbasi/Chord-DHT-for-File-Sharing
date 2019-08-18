@@ -21,7 +21,8 @@ Chord makes it possible to look up any particular key in log(n) time. Chord empl
 ### Failure Resilience
 
 The Chord supports uninformed disconnection/failure of Nodes by continously pinging its successor Node. On detecting failed Node, the Chord will self stabilize. Files in the network are also replicated to the successor Node, so in case a Node goes down while another Node is downloading from it, the latter Node will be redirected to its successor.
-
+<br/>  
+<br/>  
 ## Node.py Program
 
 Since this is a decentralized system, there are no separate server and client scripts. Instead each Node.py script acts as both a server and a client therefore allowing p2p connections to other Nodes.
@@ -49,7 +50,7 @@ When the nodes start, you will be displayed with a number of options:
 
 ### Join
 
-Now you can connect one Node to another in any way. Once you choose to join the network, you can use any other's Node's IP Port combination to join the network. If you go to Node 2, choose join network and type in Node 1's IP Port. Both Node 1 and Node will be now be joined and part of the network. Similarly, other Nodes can join.
+Now you can connect one Node to another in any way. Once you choose to join the network, you can use any other's Node's IP Port combination to join the network. If you go to Node 2, choose join network and type in Node 1's IP Port. Both Node 1 and Node 2 will be now be joined and part of the network. Similarly, other Nodes can join.
 
 ### Leave
 
@@ -59,7 +60,8 @@ Note: The Chord also supports uninformed disconnection/failure of nodes, however
 ### Upload and Download File
 
 Type the name of the file present in the same directory. Uploading file will send the file to the relevant Node based on hash of filename. Downloading will be done from the relevant Node with the file.
-Chord supports large file transfer by sending file in chunks (based on buffer size).
+Chord supports large file transfer by sending file in chunks (based on buffer size).  
+<br/>  
 
 ##### Improvements/Issues:
 
