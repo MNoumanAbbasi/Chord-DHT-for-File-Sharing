@@ -54,11 +54,16 @@ Now you can connect one Node to another in any way. Once you choose to join the 
 ### Leave
 
 Nodes can leave the network by informing the Chord and hence other Nodes of its departure.
-Note: The Chord also supports uninformed disconnection/failure of nodes but informed leaving is preferred.
+Note: The Chord also supports uninformed disconnection/failure of nodes, however informed leaving is still preferred.
 
 ### Upload and Download File
 
 Type the name of the file present in the same directory. Uploading file will send the file to the relevant Node based on hash of filename. Downloading will be done from the relevant Node with the file.
-Chord supports large file transfer by sending file in chunks (based on buffer).
+Chord supports large file transfer by sending file in chunks (based on buffer size).
 
-**Disclaimer**: The work is still in progress and has issues. There is still a need of successors list in addition to the fingertable implemented to have better failure resilience.
+##### Improvements/Issues:
+
+* A need of 'successors list', in addition to the fingertable implemented, to have better failure resilience. Right now, the Chord may fail when two or more consecutive Nodes leave before the Chord has time to stabilize.
+* Files are duplicated only once when they are uploaded. After a Node leaves (uninformed), its uploaded files are no longer duplicated.
+
+**Disclaimer**: The work is still in progress and may have issues other than those mentioned above.
